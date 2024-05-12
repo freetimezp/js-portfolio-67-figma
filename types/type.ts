@@ -11,6 +11,7 @@ export enum CursorMode {
 export type CursorState =
   | {
     mode: CursorMode.Hidden;
+    message?: string | any;
   }
   | {
     mode: CursorMode.Chat;
@@ -19,11 +20,13 @@ export type CursorState =
   }
   | {
     mode: CursorMode.ReactionSelector;
+    message?: string;
   }
   | {
     mode: CursorMode.Reaction;
     reaction: string;
     isPressed: boolean;
+    message?: string;
   };
 
 export type Reaction = {
@@ -189,4 +192,5 @@ export type CursorChatProps = {
       message: string;
     }>
   ) => void;
+  message: string;
 };
