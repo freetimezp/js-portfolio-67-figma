@@ -11,6 +11,8 @@ import { Comments } from './comments/Comments';
 
 type Props = {
     canvasRef: React.MutableRefObject<HTMLCanvasElement | null>;
+    undo?: () => void;
+    redo?: () => void;
 }
 
 export default function Live({ canvasRef }: Props) {
