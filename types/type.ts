@@ -192,5 +192,4 @@ export type CursorChatProps = {
       message: string;
     }>
   ) => void;
-  message: string;
 };
